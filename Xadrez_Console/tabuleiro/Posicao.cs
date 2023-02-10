@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tabuleiro
+namespace tabuleiro
 {
-    internal class Position
+    internal class Posicao
     {
         public int Linha { get; set; }
         public int Coluna { get; set; }
 
-        public Position(int linha, int coluna)
+        public Posicao(int linha, int coluna)
         {
             this.Linha = linha;
             this.Coluna = coluna;
