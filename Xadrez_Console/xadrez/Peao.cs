@@ -1,7 +1,7 @@
 ﻿using System;
 using tabuleiro;
 
-namespace Xadrez_Console.xadrez
+namespace xadrez
 {
     internal class Peao : Peca
     {
