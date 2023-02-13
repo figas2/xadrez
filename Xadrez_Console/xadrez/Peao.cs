@@ -26,8 +26,25 @@ namespace xadrez
 
             Posicao pos = new Posicao(0, 0);
 
+            //acima
+            if (cor == Cor.Branca)
+            {
+                pos.definirValores(posicao.Linha - 1, posicao.Coluna);
 
+                if (Tab.posicaoValida(pos) && podeMover(pos))
+                {
+                    mat[pos.Linha, pos.Coluna] = true;
+                }
+            }
+            if (cor == Cor.Preta)
+            {                
+                pos.definirValores(posicao.Linha + 1, posicao.Coluna);
 
+                if (Tab.posicaoValida(pos) && podeMover(pos))
+                {
+                    mat[pos.Linha, pos.Coluna] = true;
+                }
+            }
             return mat;
         }
     }
