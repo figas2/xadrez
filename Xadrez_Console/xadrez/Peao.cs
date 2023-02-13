@@ -29,11 +29,23 @@ namespace xadrez
             //acima
             if (cor == Cor.Branca)
             {
-                pos.definirValores(posicao.Linha - 1, posicao.Coluna);
-
-                if (Tab.posicaoValida(pos) && podeMover(pos))
+                if (pos.Linha == 2)
                 {
-                    mat[pos.Linha, pos.Coluna] = true;
+                    pos.definirValores(posicao.Linha - 2, posicao.Coluna);
+
+                    if (Tab.posicaoValida(pos) && podeMover(pos))
+                    {
+                        mat[pos.Linha, pos.Coluna] = true;
+                    }
+                }
+                else
+                {
+                    pos.definirValores(posicao.Linha - 1, posicao.Coluna);
+
+                    if (Tab.posicaoValida(pos) && podeMover(pos))
+                    {
+                        mat[pos.Linha, pos.Coluna] = true;
+                    }
                 }
             }
             if (cor == Cor.Preta)
