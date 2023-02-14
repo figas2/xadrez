@@ -17,7 +17,7 @@ namespace xadrez
         private bool existeInimigo(Posicao pos)
         {
             Peca p = Tab.peca(pos);
-            return p != null&& p.cor != cor;
+            return p != null && p.cor != cor;
         }
         private bool livre(Posicao pos)
         {
@@ -39,24 +39,24 @@ namespace xadrez
             {                
                 pos.definirValores(posicao.Linha - 1, posicao.Coluna);
 
-                if (Tab.posicaoValida(pos) && podeMover(pos))
+                if (Tab.posicaoValida(pos) && livre(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.definirValores(posicao.Linha - 2, posicao.Coluna);
 
+                pos.definirValores(posicao.Linha - 2, posicao.Coluna);
                 if (Tab.posicaoValida(pos) && livre(pos) && QuantMov == 0)
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.definirValores(posicao.Linha - 1, posicao.Coluna -1);
 
+                pos.definirValores(posicao.Linha - 1, posicao.Coluna -1);
                 if (Tab.posicaoValida(pos) && existeInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.definirValores(posicao.Linha - 1, posicao.Coluna + 1);
 
+                pos.definirValores(posicao.Linha - 1, posicao.Coluna + 1);
                 if (Tab.posicaoValida(pos) && existeInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
@@ -66,7 +66,7 @@ namespace xadrez
             {
                 pos.definirValores(posicao.Linha + 1, posicao.Coluna);
 
-                if (Tab.posicaoValida(pos) && podeMover(pos))
+                if (Tab.posicaoValida(pos) && livre(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
