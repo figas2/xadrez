@@ -3,15 +3,15 @@ using tabuleiro;
 
 namespace xadrez
 {
-    internal class Rainha : Peca
+    internal class Dama : Peca
     {
-        public Rainha(Tabuleiro tab, Cor cor) : base(cor, tab)
+        public Dama(Tabuleiro tab, Cor cor) : base(cor, tab)
         {
         }
 
         public override string ToString()
         {
-            return "Q"; //queen
+            return "D";
         }
 
         private bool podeMover(Posicao pos)

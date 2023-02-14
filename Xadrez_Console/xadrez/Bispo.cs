@@ -25,7 +25,7 @@ namespace xadrez
             bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
 
             Posicao pos = new Posicao(0, 0);
-            //noroeste
+            //nordeste
             pos.definirValores(posicao.Linha - 1, posicao.Coluna + 1);
             while (Tab.posicaoValida(pos) && podeMover(pos))
             {
