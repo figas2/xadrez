@@ -43,6 +43,11 @@ namespace Xadrez_Console
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro no Formato! " + e.Message );
+                        Console.ReadLine();
+                    }
                 }
                 Console.Clear();
                 Tela.imprimirPartida(partida);
